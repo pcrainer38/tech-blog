@@ -6,7 +6,7 @@ class User extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
-}
+};
 
 User.init(
     {
@@ -17,7 +17,7 @@ User.init(
             autoIncrement: true,
         },
         
-        userName: {
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
            
@@ -46,6 +46,7 @@ User.init(
             },
             beforeUpdate: async (updatedUserData) => {
                 updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
             },
         },
         sequelize,
