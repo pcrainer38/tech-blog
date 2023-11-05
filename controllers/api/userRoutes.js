@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const User = require('../../models/User');
+const User = require('../../models');
 
 router.get('/', async(req, res) => {
-    res.render('homepage');
+    res.render('profile');
 });
 
 
@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
             req.session.logged_in = true;
 
             res.status(200).json(userData);
+           
         });
     } catch (err) {
         console.log(err);

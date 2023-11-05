@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models/Blog');
+const { Blog, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/blogs', async (req, res) => {
@@ -18,12 +18,12 @@ router.get('/blogs', async (req, res) => {
         const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
         // Pass serialized data and session flag into template 
-        res.render('homepage', {
+        req.render('homepage', {
             blogs,
             logged_in: req.session.logged_in
         });
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json(err)
     }
 });
 
@@ -72,7 +72,7 @@ router.get('/blogs', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/blogs');
         return;
     }
 
