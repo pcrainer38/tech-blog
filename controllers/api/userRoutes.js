@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models');
+const { User } = require('../../models/');
 
 router.get('/', async(req, res) => {
     res.render('profile');
@@ -8,6 +8,7 @@ router.get('/', async(req, res) => {
 
 router.post('/', async (req, res) => {
     try {
+        console.log(User);
         const userData = await User.create(req.body);
 
         req.session.save(() => {
