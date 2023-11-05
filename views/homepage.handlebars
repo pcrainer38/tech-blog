@@ -1,21 +1,26 @@
+
 <div class="blog-container">
 
-    
     <div class="card-header d-flex justify-content-center">
         <h2 id="title">        
             The Tech Blog
         </h2>
     </div>
     
-        <div class="bgimg d-flex justify-content-center">
-            <img src="/images/pexels-luis-quintero-2148220.jpg" alt="laptop"> 
-        </div>
-        
-    <section class="card">
-       <a href="/blogs/{{id}}"></a>
-       <header>{{title}}</header>
-    </section>
-    </a> 
-</div>
+    <div class="bgimg d-flex justify-content-center">
+        <img src="/images/pexels-luis-quintero-2148220.jpg" alt="laptop"> 
+    </div>
 
-<script src="./js/profile.js"></script>
+    {{#each blogs as |blog|}} 
+    <div class="card">
+       <a href="/blogs/{{id}}">
+       <p>{{title}}</p>
+       </a>
+    </div>
+    </a> 
+    {{/each}}
+
+</div>
+       
+
+

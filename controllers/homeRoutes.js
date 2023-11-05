@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['username','description'],
+                    attributes: ['username'],
                 },
             ],
         });
@@ -18,11 +18,12 @@ router.get('/', async (req, res) => {
         const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
         // Pass serialized data and session flag into template 
-        req.render('homepage', {
+        res.render('homepage', {
             blogs,
             logged_in: req.session.logged_in
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err)
     }
 });
@@ -33,7 +34,7 @@ router.get('/blogs/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['username','description'],
+                    attributes: ['username'],
                 },
             ],
         });
@@ -45,6 +46,7 @@ router.get('/blogs/:id', async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
