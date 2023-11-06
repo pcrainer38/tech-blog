@@ -16,14 +16,14 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             console.log('you are now logged in');
             // If successful, redirect to the blogs page
-            document.location.replace('/blogs');
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
     }
 };
 
-document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+
+document.querySelector('.login-form')
+document.addEventListener('submit', loginFormHandler);
 

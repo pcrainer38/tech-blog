@@ -37,10 +37,10 @@ const delButtonHandler = async (event) => {
     }
 };
 
-document
-    .querySelector('.new-blog-post')
-    .addEventListener('submit', newFormHandler);
 
-document
-    .querySelector('.blog-list')
-    .addEventListener('click', delButtonHandler);
+document.querySelector('.new-blog-post')
+document.addEventListener('submit', newFormHandler);
+
+
+document.querySelector('.blog-list')
+document.addEventListener('click', delButtonHandler);

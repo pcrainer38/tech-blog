@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Handlebars",
+        "description": "Handlebars makes quick work of creating a webpage.",
+        "username": "pammie",
+        "date_created": "11/4/2023"
+    },
+    {
+        "title": "MVC",
+        "description": "MVC is an effective way to organize code.",
+        "username": "newhiplaura",
+        "date_created": "11/4/2023"
+    },
+    {
+        "title": "CSS",
+        "description": "CSS makes webpages fun to look at.",
+        "username": "kate",
+        "date_created": "11/5/2023"
+    }
+]

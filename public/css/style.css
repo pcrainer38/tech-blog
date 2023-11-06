@@ -1,14 +1,23 @@
+header {
+    background-color: navy;
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
 #title {
     font-family: Diplomata, Bungee Spice, serif;
-    font-size: 56px;
+    font-size: 60px;
 }
 
 .bgimg {
-    background-image: url("public/css/images/pexels-luis-quintero-2148220.jpg");
+    /* background-image: url("public/css/images/pexels-luis-quintero-2148220.jpg"); */
     width: auto;
     height: 50vh;
     position: relative;
-    opacity: 0.50;
+    opacity: 0.65;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
