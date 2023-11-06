@@ -21,7 +21,9 @@
             <p>
                 <a href="/">Home</a> |
                 <a href="/profile">Dashboard</a> |
+                {{#unless logged_in}}
                 <a href="/login">Login</a>
+                {{/unless}}
             </p>
             {{!-- <div>
                 <h1>
@@ -30,9 +32,9 @@
             </div> --}}
             <nav>
                 {{#if logged_in}}
-               <a href="/logout">
+               
                <button class="no-button" id="logout">Logout</button>
-               </a> 
+              
                 {{/if}}
 
             </nav>

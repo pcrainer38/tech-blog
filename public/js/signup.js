@@ -1,7 +1,7 @@
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector('#username-signup').value.trim();
+    const username = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blogs');
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
@@ -23,3 +23,8 @@ const signupFormHandler = async (event) => {
 
 document.querySelector('.signup-form')
 document.addEventListener('submit', signupFormHandler);
+
+// var url = window.location.href.split("/")
+// undefined
+// url [url.length -1]
+// '1'
