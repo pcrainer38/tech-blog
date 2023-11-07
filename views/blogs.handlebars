@@ -12,4 +12,14 @@
         <div class="form-group">
         <button class="btn btn-primary" type="submit">Submit</button>
       </div>
+        {{#each comments as |comment|}}
+        <div class="row mb-2">
+            <h4><a href="/comment/{{comment.id}}">{{comment.content}}</a></h4>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
+        </div>
+        {{/each}}
 </form>
+
+<script src="/js/comment.js"></script>
