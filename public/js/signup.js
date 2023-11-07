@@ -24,7 +24,3 @@ const signupFormHandler = async (event) => {
 document.querySelector('.signup-form')
 document.addEventListener('submit', signupFormHandler);
 
-// var url = window.location.href.split("/")
-// undefined
-// url [url.length -1]
-// '1'

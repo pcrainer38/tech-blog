@@ -2,9 +2,7 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
     const content = document.querySelector('#comment-content').value.trim();
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length -1
-    ]
+    
 
     if (content) {
         const response = await fetch('/api/comment', {
@@ -16,6 +14,7 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
+            console.log(response);
             document.location.replace('/comment');
         } else {
             alert('Failed to create comment.');
@@ -25,8 +24,9 @@ const newFormHandler = async (event) => {
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
+        
         const id = event.target.getAttribute('data-id');
-
+        
         const response = await fetch(`/api/comment/${id}`, {
             method: 'DELETE',
         });
