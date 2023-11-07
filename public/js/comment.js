@@ -14,7 +14,6 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            console.log(response);
             document.location.replace('/comment');
         } else {
             alert('Failed to create comment.');
