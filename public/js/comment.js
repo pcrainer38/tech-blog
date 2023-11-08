@@ -2,7 +2,7 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
     const content = document.querySelector('#comment-content').value.trim();
-    
+
 
     if (content) {
         const response = await fetch('/api/comment', {
@@ -39,9 +39,9 @@ const delButtonHandler = async (event) => {
 };
 
 
-document.querySelector('.new-blog-post')
+document.querySelector('.comment-content')
 document.addEventListener('submit', newFormHandler);
 
 
-document.querySelector('.blog-list')
+document.querySelector('.comment-list')
 document.addEventListener('click', delButtonHandler);
