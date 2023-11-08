@@ -8,6 +8,10 @@
   
   This is an application that allows a user to sign-in and view blog posts, make comments on posts and create or delete posts their own posts.
 
+  ## Link
+
+  https://tech-blog-pc-fe469bba8c37.herokuapp.com/
+
   ## Table of Contents 
   - [Installation](#installation) 
   - [Usage](#usage) 
